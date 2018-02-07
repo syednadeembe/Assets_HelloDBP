@@ -1,0 +1,107 @@
+<asset_composite xmlns="http://namespaces.softwareag.com/acdl/1.0" targetNamespace="http://namespaces.softwareag.com/webMethods/IS" name="ZHelloDBP" runtimeVersion="10.1.0.0">
+  <implementation.generic type="ispackage" />
+  <buildInfo name="build.version" value="10.1.5" />
+  <buildInfo name="BuildVersion" value="10.1.5" />
+  <buildInfo name="BuildTimestamp" value="2018-02-07T00:20:32" />
+  <buildInfo name="MinimumTargetRuntimeVersion" value="10.1.0.0" />
+  <property name="activatePkgOnInstall" displayName="Activate Package On Install">
+    <value>true</value>
+  </property>
+  <property name="archivePkgOnInstall" displayName="Archive Package On Install">
+    <value>true</value>
+  </property>
+  <property name="compilePackage" displayName="Compile Package On Install">
+    <value>true</value>
+  </property>
+  <property name="fragPackage" displayName="Fragment Package On Install">
+    <value>true</value>
+  </property>
+  <property name="clearACLs" displayName="Delete ACLs for the assets from the target Integration Server">
+    <value>false</value>
+  </property>
+  <property name="disallowActivePackageInstall" displayName="disallowActivePackageInstall">
+    <value>false</value>
+  </property>
+  <property name="packageExecutionCheck" displayName="packageExecutionCheck">
+    <value>0</value>
+  </property>
+  <property name="suspendTriggersDuringDeploy" displayName="Suspend Triggers During Deployment">
+    <value>false</value>
+  </property>
+  <property name="syncDocTypesToBroker" displayName="Synchronize Document Types To Broker During Deployment">
+    <value>true</value>
+  </property>
+  <asset name="ISPackage.ZHelloDBP" displayName="ZHelloDBP">
+    <implementation.generic type="ispackage" />
+  </asset>
+  <asset name="HelloIS2.listThings" displayName="HelloIS2:listThings">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:HelloIS2.Thing</dependsOn>
+    <dependsOn>IS:HelloTerracotta2.readThing</dependsOn>
+  </asset>
+  <asset name="HelloIS2.Thing" displayName="HelloIS2:Thing">
+    <implementation.generic type="isdocumenttype" />
+  </asset>
+  <asset name="HelloIS2.createThing" displayName="HelloIS2:createThing">
+    <implementation.generic type="isflowservice" />
+    <dependsOn>IS:HelloIS2.Thing</dependsOn>
+    <dependsOn>IS:Utility.uniqueThingID</dependsOn>
+    <dependsOn>IS:HelloTerracotta2.createThing</dependsOn>
+  </asset>
+  <asset name="HelloTerracotta2.readThing" displayName="HelloTerracotta2:readThing">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:HelloTerracotta.ThingsConnection</dependsOn>
+  </asset>
+  <asset name="HelloTerracotta2.deleteThing" displayName="HelloTerracotta2:deleteThing">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:HelloTerracotta.ThingsConnection</dependsOn>
+  </asset>
+  <asset name="HelloTerracotta2.createThing" displayName="HelloTerracotta2:createThing">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:HelloTerracotta.ThingsConnection</dependsOn>
+  </asset>
+  <asset name="HelloTerracotta2.updateThing" displayName="HelloTerracotta2:updateThing">
+    <implementation.generic type="artservice" />
+    <dependsOn>IS:HelloTerracotta.ThingsConnection</dependsOn>
+  </asset>
+  <asset name="ZHelloDBP.code" displayName="code">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ZHelloDBP.code.classes" displayName="code/classes">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ZHelloDBP.code.jars" displayName="code/jars">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ZHelloDBP.code.source" displayName="code/source">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ZHelloDBP.config" displayName="config">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ZHelloDBP.config.aclmap_pkg.cnf" displayName="config/aclmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ZHelloDBP.config.readmap_pkg.cnf" displayName="config/readmap_pkg.cnf">
+    <implementation.generic type="isfile" />
+  </asset>
+  <asset name="ZHelloDBP.doc" displayName="doc">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ZHelloDBP.lib" displayName="lib">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ZHelloDBP.pub" displayName="pub">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ZHelloDBP.resources" displayName="resources">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ZHelloDBP.templates" displayName="templates">
+    <implementation.generic type="isfolder" />
+  </asset>
+  <asset name="ZHelloDBP.web" displayName="web">
+    <implementation.generic type="isfolder" />
+  </asset>
+</asset_composite>
+

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<asset_composite name="TypeRepository" displayName="TypeRepository" runtimeVersion="10.1" targetNamespace="http://namespaces.softwareag.com/IoTAnalytics/DES" xmlns="http://namespaces.softwareag.com/acdl/1.0" xmlns:EDA="http://namespaces.softwareag.com/webMethods/EDA" xmlns:MWS="http://namespaces.softwareag.com/webMethods/MWS" xmlns:IS="http://namespaces.softwareag.com/webMethods/IS" xmlns:APIPORTAL="http://namespaces.softwareag.com/webMethods/APIPORTAL" xmlns:AgileApps="http://namespaces.softwareag.com/webMethods/AgileApps" xmlns:BROKER="http://namespaces.softwareag.com/webMethods/BROKER" xmlns:implDetails="http://namespaces.softwareag.com/acdl/implDetails" xmlns:UniversalMessaging="http://namespaces.softwareag.com/webMethods/UniversalMessaging" xmlns:TN="http://namespaces.softwareag.com/webMethods/TN" xmlns:RULES="http://namespaces.softwareag.com/webMethods/RULES" xmlns:BPM="http://namespaces.softwareag.com/webMethods/BPM" xmlns:Optimize="http://namespaces.softwareag.com/webMethods/Optimize">
+    <buildInfo name="build.timestamp" value="2018-02-07T00:20:51"/>
+    <buildInfo name="build.version" value="10.1.5"/>
+    <asset name="DesEventTypeInfo.des.apigateway.runtime.events.API" displayName="des.apigateway.runtime.events.API" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.apigateway.runtime.events.Application" displayName="des.apigateway.runtime.events.Application" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.apigateway.runtime.events.ErrorEvents" displayName="des.apigateway.runtime.events.ErrorEvents" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.apigateway.runtime.events.LifeCycleEvents" displayName="des.apigateway.runtime.events.LifeCycleEvents" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.apigateway.runtime.events.MonitorEvents" displayName="des.apigateway.runtime.events.MonitorEvents" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.apigateway.runtime.events.PolicyViolationEvents" displayName="des.apigateway.runtime.events.PolicyViolationEvents" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.apigateway.runtime.events.TransactionalEvents" displayName="des.apigateway.runtime.events.TransactionalEvents" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.apigateway.runtime.metrics.PerformanceMetrics" displayName="des.apigateway.runtime.metrics.PerformanceMetrics" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.evs.DynamicServiceConfiguration" displayName="des.evs.DynamicServiceConfiguration" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.evs.EventPersistenceError" displayName="des.evs.EventPersistenceError" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.evs.KeyValuePair" displayName="des.evs.KeyValuePair" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.task.TaskChanged" displayName="des.task.TaskChanged" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.des.task.Task" displayName="des.task.Task" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.HelloEvents.ThingAlert" displayName="HelloEvents.ThingAlert" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventTypeInfo.HelloEvents.ThingEvent" displayName="HelloEvents.ThingEvent" isDeployable="true">
+        <implementation.generic type="DesEventTypeInfo"/>
+    </asset>
+    <asset name="DesEventType.des.apigateway.runtime.events.API_e28432731bec9881" displayName="des.apigateway.runtime.events.API_e28432731bec9881" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesEventTypeInfo.des.apigateway.runtime.events.API</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.apigateway.runtime.events.Application_b5c9883fd4f02f59" displayName="des.apigateway.runtime.events.Application_b5c9883fd4f02f59" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesEventTypeInfo.des.apigateway.runtime.events.Application</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.apigateway.runtime.events.ErrorEvents_c1a8fe3b2e577ab7" displayName="des.apigateway.runtime.events.ErrorEvents_c1a8fe3b2e577ab7" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesAnnotation.EventId</dependsOn>
+        <dependsOn>DES:DesEventType.des.apigateway.runtime.events.API_e28432731bec9881</dependsOn>
+        <dependsOn>DES:DesEventType.des.apigateway.runtime.events.Application_b5c9883fd4f02f59</dependsOn>
+        <dependsOn>DES:DesEventTypeInfo.des.apigateway.runtime.events.ErrorEvents</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.apigateway.runtime.events.LifeCycleEvents_ec309fcad0f1189b" displayName="des.apigateway.runtime.events.LifeCycleEvents_ec309fcad0f1189b" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesAnnotation.EventId</dependsOn>
+        <dependsOn>DES:DesEventTypeInfo.des.apigateway.runtime.events.LifeCycleEvents</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.apigateway.runtime.events.MonitorEvents_b0e9cab0b81a31c5" displayName="des.apigateway.runtime.events.MonitorEvents_b0e9cab0b81a31c5" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesAnnotation.EventId</dependsOn>
+        <dependsOn>DES:DesEventType.des.apigateway.runtime.events.API_e28432731bec9881</dependsOn>
+        <dependsOn>DES:DesEventType.des.apigateway.runtime.events.Application_b5c9883fd4f02f59</dependsOn>
+        <dependsOn>DES:DesEventTypeInfo.des.apigateway.runtime.events.MonitorEvents</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.apigateway.runtime.events.PolicyViolationEvents_8b323a253c866018" displayName="des.apigateway.runtime.events.PolicyViolationEvents_8b323a253c866018" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesAnnotation.EventId</dependsOn>
+        <dependsOn>DES:DesEventType.des.apigateway.runtime.events.API_e28432731bec9881</dependsOn>
+        <dependsOn>DES:DesEventType.des.apigateway.runtime.events.Application_b5c9883fd4f02f59</dependsOn>
+        <dependsOn>DES:DesEventTypeInfo.des.apigateway.runtime.events.PolicyViolationEvents</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.apigateway.runtime.events.TransactionalEvents_571e680da94419ef" displayName="des.apigateway.runtime.events.TransactionalEvents_571e680da94419ef" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesAnnotation.EventId</dependsOn>
+        <dependsOn>DES:DesEventType.des.apigateway.runtime.events.API_e28432731bec9881</dependsOn>
+        <dependsOn>DES:DesEventType.des.apigateway.runtime.events.Application_b5c9883fd4f02f59</dependsOn>
+        <dependsOn>DES:DesEventTypeInfo.des.apigateway.runtime.events.TransactionalEvents</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.apigateway.runtime.metrics.PerformanceMetrics_43749b3e13a9b331" displayName="des.apigateway.runtime.metrics.PerformanceMetrics_43749b3e13a9b331" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesAnnotation.EventId</dependsOn>
+        <dependsOn>DES:DesEventType.des.apigateway.runtime.events.API_e28432731bec9881</dependsOn>
+        <dependsOn>DES:DesEventTypeInfo.des.apigateway.runtime.metrics.PerformanceMetrics</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.evs.DynamicServiceConfiguration_482832d387209c68" displayName="des.evs.DynamicServiceConfiguration_482832d387209c68" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesEventType.des.evs.KeyValuePair_13d63059fa2028fa</dependsOn>
+        <dependsOn>DES:DesEventTypeInfo.des.evs.DynamicServiceConfiguration</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.evs.EventPersistenceError_d4a924adf27edf73" displayName="des.evs.EventPersistenceError_d4a924adf27edf73" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesAnnotation.EventId</dependsOn>
+        <dependsOn>DES:DesEventTypeInfo.des.evs.EventPersistenceError</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.evs.KeyValuePair_13d63059fa2028fa" displayName="des.evs.KeyValuePair_13d63059fa2028fa" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesEventTypeInfo.des.evs.KeyValuePair</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.task.TaskChanged_3e6b272480549fb" displayName="des.task.TaskChanged_3e6b272480549fb" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesAnnotation.EventId</dependsOn>
+        <dependsOn>DES:DesAnnotation.EventTime</dependsOn>
+        <dependsOn>DES:DesEventType.des.task.Task_6a946027e8fc9831</dependsOn>
+        <dependsOn>DES:DesEventTypeInfo.des.task.TaskChanged</dependsOn>
+    </asset>
+    <asset name="DesEventType.des.task.Task_6a946027e8fc9831" displayName="des.task.Task_6a946027e8fc9831" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesEventTypeInfo.des.task.Task</dependsOn>
+    </asset>
+    <asset name="DesEventType.HelloEvents.ThingAlert_9a2dc16d7e97f8ec" displayName="HelloEvents.ThingAlert_9a2dc16d7e97f8ec" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesAnnotation.EventId</dependsOn>
+        <dependsOn>DES:DesEventTypeInfo.HelloEvents.ThingAlert</dependsOn>
+    </asset>
+    <asset name="DesEventType.HelloEvents.ThingEvent_42c16f88fe707af3" displayName="HelloEvents.ThingEvent_42c16f88fe707af3" isDeployable="true">
+        <implementation.generic type="DesEventType"/>
+        <dependsOn>DES:DesAnnotation.EventId</dependsOn>
+        <dependsOn>DES:DesEventTypeInfo.HelloEvents.ThingEvent</dependsOn>
+    </asset>
+    <asset name="DesAnnotation.is.Inline" displayName="is.Inline" isDeployable="true">
+        <implementation.generic type="DesAnnotation"/>
+    </asset>
+    <asset name="DesAnnotation.EventTime" displayName="EventTime" isDeployable="true">
+        <implementation.generic type="DesAnnotation"/>
+    </asset>
+    <asset name="DesAnnotation.EventId" displayName="EventId" isDeployable="true">
+        <implementation.generic type="DesAnnotation"/>
+    </asset>
+</asset_composite>
